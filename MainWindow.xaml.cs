@@ -30,7 +30,7 @@ namespace DataBinding
 
         private void ButtonInfo_Click(object sender, RoutedEventArgs e)
         {
-            MessageBox.Show("Hello World!");
+            MessageBox.Show($"{person.Name} is {person.Age} years old.");
         }
     }
 }
