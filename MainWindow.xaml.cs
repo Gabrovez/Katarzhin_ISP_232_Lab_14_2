@@ -20,5 +20,10 @@ namespace DataBinding
         {
             InitializeComponent();
         }
+
+        private void ButtonInfo_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Hello World!");
+        }
     }
 }
