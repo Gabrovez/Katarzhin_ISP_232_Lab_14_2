@@ -18,5 +18,15 @@ namespace DataBinding
             InitializeComponent();
             ListBoxNames.ItemsSource = People;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var selectedItems = ListBoxNames.SelectedItems;
+            foreach( var item in selectedItems)
+            {
+                var person = (Person)item;
+                MessageBox.Show(person.Name);
+            }
+        }
     }
 }
