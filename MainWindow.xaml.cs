@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using DataBinding.Data;
+using System.Text;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
@@ -16,9 +17,15 @@ namespace DataBinding
     /// </summary>
     public partial class MainWindow : Window
     {
+        Person person = new Person
+        {
+            Name = "Grisha",
+            Age = 18
+        };
         public MainWindow()
         {
             InitializeComponent();
+            this.DataContext = person;
         }
 
         private void ButtonInfo_Click(object sender, RoutedEventArgs e)
